@@ -53,12 +53,12 @@ public class Sandbox {
       System.out.println("The average of the elements in the array is " + find_avg(elements, arr));                       
    }  
    
-   public static double find_avg(int elementsIn, int ... arr) {      
+   public static double find_avg(int elementsIn, int ... arrIn) {      
       double result = 0;
       for (int i = 0; i < elementsIn; i++) {
-         result += arr[i];
+         result += arrIn[i];
       }
-      if (arr.length != 0)                return result / elementsIn; 
+      if (arrIn.length != 0)                return result / elementsIn; 
       else                                return 0;      
    }
 }
