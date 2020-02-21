@@ -1,0 +1,57 @@
+import java.util.Scanner;
+
+/**
+  *This class shows a few ways to converst digits to strings and vice versa.
+  *
+  *@author Mitchel Santillan
+  *@version 6/6/2019
+  */
+public class DigitStringConverter {
+   /**
+     *This program uses several methods more string and digit manipulation.
+     *
+     *@param args Command line arguments (not used).
+     */
+   public static void main(String[] args) {
+      String age = "20";
+      System.out.println("The age as a String is: " + age);
+      
+      double digitAge = Double.parseDouble(age);
+      int digitAge2 = Integer.parseInt(age);
+      //Prints age as a double.
+      System.out.println("The age as a double is: " + digitAge);
+      //Prints age as an int.
+      System.out.println("The age as an int: " + digitAge2);
+      
+      double num = 1;
+      //Converts double to a String.
+      String level = Double.toString(num);      
+      
+      //Checks if conversion from double to String worked as intended.
+      if (level.equals("1.0"))        System.out.println("It worked!");
+      else                            System.out.println("It failed...");
+            
+      //Checks if conversion from int to String worked as intended.            
+      int number = 7;
+      String newNum = Integer.toString(number);
+      if (newNum.equals("7"))          System.out.println("It worked!");
+      else                            System.out.println("It failed...");
+      
+      //***************************************** Scanner Class Practice *****************************************************
+      Scanner stdIn = new Scanner("This is a test");
+      
+      //Uses the scanner class to read the string token by token printing them out until there are none left.
+      while (stdIn.hasNext()) {
+         System.out.print(stdIn.next() + " ");
+      }
+      System.out.println("\n");
+      
+      //To see the effects to the delimiter remove the comments from lines 45-46.
+      Scanner scan = new Scanner("Bob Joe/Male/1921");
+      //scan.useDelimiter("/");
+      //System.out.println("The delimeter is: " + scan.delimiter());
+      while (scan.hasNext()) {
+         System.out.println(scan.next());
+      }      
+   }
+}
