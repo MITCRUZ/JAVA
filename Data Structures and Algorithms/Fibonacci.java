@@ -13,12 +13,15 @@ public class Fibonacci {
      *@param args Command Line Arguments
      */
    public static void main(String[] args) {      
-      System.out.println(fib(0));
+      System.out.println(Fib(-0));
    }
    
-   public static int fib(int n) {           
-      if (n < 1)             return -1;
-      else if (n <= 2)       return n -1;
-      return fib(n - 1) + fib(n - 2);            
+   public static int Fib(int n) {           
+      //Corner Case
+      if (n <= 0)           return -1;
+      //Base Case
+      if (n < 3)           return n - 1;
+      //Regular Cases
+      return Fib(n - 1) + Fib(n - 2);
    }
 }
